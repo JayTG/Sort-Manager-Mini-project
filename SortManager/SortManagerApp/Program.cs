@@ -1,4 +1,6 @@
-﻿namespace SortManagerApp;
+using System;
+
+namespace SortManagerApp;
 
 public class Program
 {
