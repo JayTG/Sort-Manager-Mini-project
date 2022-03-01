@@ -4,33 +4,32 @@ public class Program
 {
     public static void Main()
     {
-
     }
-    public static int[] bubbleSort(int[] arr)
+    public static int[] BubbleSort(int[] arr)
     {
         throw new NotImplementedException();
     }
-    public static int[] mergeSort(int[] arr)
+    public static int[] MergeSort(int[] arr)
     {
         throw new NotImplementedException();
     }
-    public static int[] heapSort(int[] arr)
+    public static int[] HeapSort(int[] arr)
     {
         throw new NotImplementedException();
     }
-    public static int[] selectionSort(int[] arr)
+    public static int[] SelectionSort(int[] arr)
     {
         throw new NotImplementedException();
     }
-    public static int[] insertionSort(int[] arr)
+    public static int[] InsertionSort(int[] arr)
     {
         throw new NotImplementedException();
     }
-    public static int[] shellSort(int[] arr)
+    public static int[] ShellSort(int[] arr)
     {
         throw new NotImplementedException();
     }
-    public static int[] quickSort(int[] arr)
+    public static int[] QuickSort(int[] arr)
     {
         throw new NotImplementedException();
     }
