@@ -11,15 +11,34 @@ public class Program
         //set array length here
         //Adam testing space
         int[] test = { 4,5,2,7,3}; // {2,3,4,5,7}
+        DateTime time = DateTime.Now;
         int[] sortedArray = SortingAlgorithms.MergeArrays(test);
+        time.Subtract(DateTime.Now);
         foreach(var i in test)
         {
             Console.Write($"{i}, ");
         }
+        Console.WriteLine();
         foreach (var i in sortedArray)
         {
             Console.Write($"{i}, ");
         }
+        Console.WriteLine($"It took exactly: {time.Millisecond}ms");
+        
+        int[] test2 = { 4,5,2,7,3,7}; // {2,3,4,5,7}
+        DateTime time2 = DateTime.Now;
+        int[] sortedArray2 = SortingAlgorithms.BubbleSortArray(test2);
+        time2.Subtract(DateTime.Now);
+        foreach(var i in test2)
+        {
+            Console.Write($"{i}, ");
+        }
+        Console.WriteLine();
+        foreach (var i in sortedArray2)
+        {
+            Console.Write($"{i}, ");
+        }
+        Console.WriteLine($"It took exactly: {time2.Millisecond}ms");
         //EndOfAdamTestingSpace
     }
 
