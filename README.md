@@ -1,7 +1,10 @@
-# Sort-Manager-Mini-project
+# Project-title
 
+**Sort-Manager-Mini-project**
 <!-- Add banner here -->
-
+*Adam*
+*Dmitry*
+*Jay*
 
 <!-- Add buttons here -->
 
@@ -19,6 +22,11 @@ The program outputs in order:
 - The sort algorithm to be used
 - The sorted array after the algorithm has been executed
 - The time taken
+
+Sort algorithms used:
+- BubbleSort
+- MergeSort (iterative or recursive)
+- .NET library sort methods
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
 
