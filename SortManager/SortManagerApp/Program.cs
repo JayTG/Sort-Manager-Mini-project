@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-=======
 ﻿namespace SortManagerApp;
 
 public class Program
@@ -40,4 +36,3 @@ public class Program
     }
 
 }
->>>>>>> main
