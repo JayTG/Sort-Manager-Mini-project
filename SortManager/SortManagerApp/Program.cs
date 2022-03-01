@@ -11,7 +11,6 @@ public class Program
 
     static void ChooseSorting()
     {
-        string text = "";
         bool chosen = false;
         while (!chosen)
         {
