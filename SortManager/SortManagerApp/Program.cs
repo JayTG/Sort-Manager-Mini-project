@@ -9,7 +9,6 @@ public class Program
         ChooseSorting();
         ChooseLength();
         //set array length here
-
         //Adam testing space
         int[] test = { 4,5,2,7,3}; // {2,3,4,5,7}
         int[] sortedArray = SortingAlgorithms.MergeArrays(test);
