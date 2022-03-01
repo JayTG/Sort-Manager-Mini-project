@@ -84,14 +84,14 @@ public class Program
         }
         
     }
-    public static int[] BubbleSort(int[] arr)
-    {
-        throw new NotImplementedException();
-    }
-    public static int[] MergeSort(int[] arr)
-    {
-        throw new NotImplementedException();
-    }
+    //public static int[] BubbleSort(int[] arr)
+    //{
+    //    throw new NotImplementedException();
+    //}
+    //public static int[] MergeSort(int[] arr)
+    //{
+    //    throw new NotImplementedException();
+    //}
     public static int[] HeapSort(int[] arr)
     {
         throw new NotImplementedException();
