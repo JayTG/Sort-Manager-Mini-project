@@ -1,10 +1,12 @@
-﻿namespace SortManagerApp;
+﻿using System;
+
+namespace SortManagerApp;
 
 public class Program
 {
     public static void Main()
     {
-
+        
     }
     public static int[] bubbleSort(int[] arr)
     {
