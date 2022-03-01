@@ -1,4 +1,6 @@
-﻿namespace SortManagerApp;
+using System;
+
+namespace SortManagerApp;
 
 public class Program
 {
@@ -7,6 +9,19 @@ public class Program
         ChooseSorting();
         ChooseLength();
         //set array length here
+
+        //Adam testing space
+        int[] test = { 4,5,2,7,3}; // {2,3,4,5,7}
+        int[] sortedArray = SortingAlgorithms.MergeArrays(test);
+        foreach(var i in test)
+        {
+            Console.Write($"{i}, ");
+        }
+        foreach (var i in sortedArray)
+        {
+            Console.Write($"{i}, ");
+        }
+        //EndOfAdamTestingSpace
     }
 
     static void ChooseSorting()
