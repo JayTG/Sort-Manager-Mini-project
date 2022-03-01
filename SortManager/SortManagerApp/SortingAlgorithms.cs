@@ -8,9 +8,10 @@ namespace SortManagerApp
 {
     public class SortingAlgorithms
     {
-        public static void BubbleSortArray(int[] intArray)
+        public static int[] BubbleSortArray(int[] intArray)
         {
             int temp;
+            int[] copy = (int[])intArray.Clone();
 
             bool sorting = true;
             bool swapped = true;
@@ -21,18 +22,19 @@ namespace SortManagerApp
                     sorting = false;
                 }
                 swapped = false;
-                for (int i = 0; i <= intArray.Length; i++)
+                for (int i = 0; i <= copy.Length; i++)
                 {
-                    if (i < intArray.Length - 1 && intArray[i] > intArray[i + 1])
+                    if (i < copy.Length - 1 && copy[i] > copy[i + 1])
                     {
-                        temp = intArray[i + 1];
-                        intArray[i + 1] = intArray[i];
-                        intArray[i] = temp;
+                        temp = copy[i + 1];
+                        copy[i + 1] = copy[i];
+                        copy[i] = temp;
                         swapped = true;
                     }
                 }
             }
             while (sorting);
+            return copy;
         }
         public static int[] MergeArrays(int[] array)
         {
