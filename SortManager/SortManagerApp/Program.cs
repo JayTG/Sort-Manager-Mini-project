@@ -39,6 +39,7 @@ public class Program
         //    Console.Write($"{i}, ");
         //}
        // Console.WriteLine($"It took exactly: {time2.Millisecond}ms");
+
         //EndOfAdamTestingSpace
     }
 
@@ -105,7 +106,7 @@ public class Program
                 continue;
             }
         }
-
+      
     }
     //public static int[] BubbleSort(int[] arr)
     //{
