@@ -39,7 +39,7 @@ public class Program
                 switch (chosenSort)
                 {
                     case 0:
-                        Console.WriteLine("Quitting App");
+                        Console.WriteLine("\nQuitting App");
                         System.Environment.Exit(0);
                         break;
                     case 1:
