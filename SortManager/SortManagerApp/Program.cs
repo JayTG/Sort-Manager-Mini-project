@@ -99,17 +99,20 @@ public class Program
         }
       
     }
-
+    
     static string GetArrayString(int[] array)
     {
+        int j = 0;
         string arrayString = "{";
         foreach (var i in array)
-        {
-            arrayString += $" {i},";
-        }
-        return arrayString.TrimEnd(',') + " }";
-    }
 
+        {
+            if (++j % 25 == 0) arrayString += $"{i},".PadLeft(6).PadRight(3) + "\n ";
+            else arrayString += $"{i},".PadLeft(6).PadRight(3);
+        }
+        return arrayString.TrimEnd(',') + "}";
+    }
+    
 
     static void DisplaySortedArray()
     {
