@@ -8,7 +8,6 @@ public class Program
     public static int[] sortedArray;
     public static int chosenSort = 0;
     public static int time = 0;
-    public static bool running = true;
 
     public static void Main()
     {
@@ -16,11 +15,10 @@ public class Program
         do
         {
             ChooseSorting();
-            if (!running) break;
             ChooseLength();
             DisplaySortedArray();
         }
-        while (running);
+        while (true);
         //arrayToSort = new int[]{4,5,2,7,3};
         //(sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
     }
@@ -88,10 +86,7 @@ public class Program
                 {
                     Console.WriteLine("Unsorted Array:");
                     arrayToSort = ArrayGeneration.Generate(lenInput);
-                    foreach (var i in arrayToSort)
-                    {
-                        Console.Write($"{i}, ");
-                    }
+                    Console.WriteLine(GetArrayString(arrayToSort));
                     break;
                 }
             }
@@ -107,13 +102,21 @@ public class Program
         Console.WriteLine("");
         Console.WriteLine("Sorted Array");
         (sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
-        foreach (var i in sortedArray)
-        {
-            Console.Write($"{i}, ");
-        }
+        Console.WriteLine(GetArrayString(sortedArray));
         Console.WriteLine("");
         Console.WriteLine($"Time taken: {time}ms");
     }
+
+    static string GetArrayString(int[] array)
+    {
+        string arrayString = "{";
+        foreach (var i in array)
+        {
+            arrayString += $" {i},";
+        }
+        return arrayString.TrimEnd(',') + " }";
+    }
+
     //public static int[] BubbleSort(int[] arr)
     //{
     //    throw new NotImplementedException();
