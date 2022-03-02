@@ -115,7 +115,7 @@ public class Program
     {
         Console.WriteLine("");
         Console.WriteLine("Sorted Array");
-        (sortedArray, time) = algorithm.SortArray(chosenSort, arrayToSort);
+        (sortedArray, time) = algorithm.SortArray(arrayToSort);
         Console.WriteLine(GetArrayString(sortedArray));
         Console.WriteLine($"\nTime taken: {time}ms\n");
     }

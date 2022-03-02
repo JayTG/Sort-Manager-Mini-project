@@ -8,7 +8,7 @@ namespace SortManagerApp
 {
     public interface ISortingAlgorithm
     {
-        (int[], int) SortArray(int chosenSort, int[] arrayToSort)
+        (int[], int) SortArray(int[] arrayToSort)
         {
             int[] sortedArray = { };
             DateTime time = DateTime.Now;
