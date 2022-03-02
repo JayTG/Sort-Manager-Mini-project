@@ -30,9 +30,9 @@ public class Program
         bool chosen = false;
         while (!chosen)
         {
-            Console.WriteLine("Choose a sorting algorithm.");
+            Console.WriteLine("Available sorting algorithms.");
             Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap | [0] Quit");
-            Console.Write("Please input a number: ");
+            Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
             int num;
 
@@ -45,12 +45,12 @@ public class Program
                         running = false;
                         break;
                     case 1:
-                        Console.WriteLine("You have choosen the Bubble Sort!");
+                        Console.WriteLine("\nYou have chosen Bubble Sort.");
                         chosen = true;
-                        chosenSort = num; //setting global chosenSort
+                        chosenSort = num;
                         break;
                     case 2:
-                        Console.WriteLine("You have choosen the Merge Sort!");
+                        Console.WriteLine("\nYou have chosen Merge Sort.");
                         chosen = true;
                         chosenSort = num;
                         break;
@@ -60,7 +60,7 @@ public class Program
                         chosenSort = num;
                         break;
                     default:
-                        Console.WriteLine("Invaild number entered");
+                        Console.WriteLine("Invaild selection, please try again.\n");
                         break;
                 }
             }
@@ -76,14 +76,14 @@ public class Program
         
         while (!vaild)
         {
-            Console.WriteLine("Type in the length of the array "); 
-            Console.Write("Please input a number: ");
+            Console.WriteLine("Generate unsorted array.");
+            Console.Write("To generate, enter array length: ");
             string input = Console.ReadLine();
             int lenInput;
             if(Int32.TryParse(input,out lenInput))
             {
                 if (lenInput < 1)
-                    Console.WriteLine("Invaild number entered");
+                    Console.WriteLine("Invaild array length, please try.");
                 else
                 {
                     Console.WriteLine("Unsorted Array:");
