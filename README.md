@@ -6,7 +6,7 @@ Group Members:
 <!-- Add buttons here -->
 
 The user is presented with a number of sort algorithms to choose from (Console)
-Decision is given via the command line (Console.ReadLine() )
+Decision is given via the command line (Console.ReadLine( ))
 
 The program will then ask for the length of an array again via the command line
 
@@ -22,8 +22,12 @@ The program outputs in order:
 
 Sort algorithms used:
 - BubbleSort
-- MergeSort (iterative or recursive)
+- MergeSort
 - HeapSort
+- SelectionSort
+- InsertionSort
+- QuickSort
+- ShellSort
 - .NET library sort methods
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
@@ -60,7 +64,7 @@ I use [**Shields IO**](https://shields.io/) for making badges. It is a simple an
 ![Tweet](https://img.shields.io/twitter/url?style=flat-square&logo=twitter&url=https%3A%2F%2Fnavendu.me%2Fnsfw-filter%2Findex.html): This is not essential but it is a cool way to let others know about your project! Clicking this button automatically opens twitter and writes a tweet about your project and link to it. All the user has to do is to click tweet. Isn't that neat? -->
 
 # Demo-Preview
-![Demo Preview](DemoPreview.png)
+![Demo Preview](/DemoPreview.png)
 
 <!-- Add a demo for your project -->
 
