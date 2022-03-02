@@ -42,7 +42,7 @@ public class Program
                 {
                     case 0:
                         Console.WriteLine("Quitting App");
-                        running = false;
+                        System.Environment.Exit(0);
                         break;
                     case 1:
                         Console.WriteLine("\nYou have chosen Bubble Sort.");
