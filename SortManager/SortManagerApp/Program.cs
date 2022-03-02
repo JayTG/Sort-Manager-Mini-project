@@ -67,7 +67,7 @@ public class Program
                         chosenText = "Insertion Sort";
                         chosen = true;
                         algorithm = new InsertionSort();
-                        break ;
+                        break;
                      case 6:
                         chosenText = "Quick Sort";
                         chosen = true;
