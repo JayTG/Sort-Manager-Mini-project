@@ -1,10 +1,9 @@
-# Project-title
+# Sort Manager App
 
 ***Sort-Manager-Mini-project***
 <!-- Add banner here -->
-*Adam*
-*Dmitry*
-*Jay*
+Group Members:
+*Adam*, *Dmitry*, *Jay*
 
 <!-- Add buttons here -->
 
@@ -89,6 +88,10 @@ Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README
 - [License](#license)
 - [Footer](#footer)
 
+# Dependencies
+- Visual Studio
+- Windows OS
+
 # Installation
 [(Back to top)](#table-of-contents)
 
@@ -113,7 +116,15 @@ To use this project, first clone the repo on your device using the command below
 # Usage
 [(Back to top)](#table-of-contents)
 
-<!-- This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also. -->
+- Lauch the SortManagerApp in Visual Studio.
+- A console window will open displaying the avaliable sorting algorithms to choose from.
+- A number input is required to pick the algorithm (Type 0 to quit the application).
+- After a algorithm has been chosen, the length of the array to be sorted is required. 
+- The input for the length cannot be less than 1 or greater than the max limit (10000)
+- Finally when the length is added a random array will be generated. 
+- The unsorted and sorted versions of the array will be displayed 
+- Addtionally the time taken to perform the sorted is displayed.
+- The program will return to the beginning where they can choose a sorting algorithm .
 
 # Development
 [(Back to top)](#table-of-contents)
