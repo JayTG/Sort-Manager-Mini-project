@@ -54,7 +54,7 @@ public class Program
                         algorithm = new MergeSort();
                         break;
                     case 3:
-                        Console.WriteLine("\nYou have choosen the Heap Sort!");
+                        chosenText = "Heap Sort";
                         chosen = true;
                         algorithm = new HeapSort();
                         break;
