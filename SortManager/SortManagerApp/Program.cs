@@ -4,6 +4,10 @@ namespace SortManagerApp;
 
 public class Program
 {
+    public int[] arrayToSort;
+    public static int[] sortedArray;
+    public static int chosenSort = 0;
+
     public static void Main()
     {
         ChooseSorting();
@@ -48,7 +52,7 @@ public class Program
         bool chosen = false;
         while (!chosen)
         {
-            Console.WriteLine("Choose an sorting algorithm.");
+            Console.WriteLine("Choose a sorting algorithm.");
             Console.WriteLine("[1] Bubble, [2] Merge");
             Console.Write("Please input a number: ");
             string input = Console.ReadLine();
@@ -61,10 +65,12 @@ public class Program
                     case 1:
                         Console.WriteLine("You have choosen the Bubble Sort!");
                         chosen = true;
+                        chosenSort = num; //setting global chosenSort
                         break;
                     case 2:
                         Console.WriteLine("You have choosen the Merge Sort!");
                         chosen = true;
+                        chosenSort = num;
                         break;
                     default:
                         Console.WriteLine("Invaild number entered");
@@ -83,7 +89,7 @@ public class Program
         
         while (!vaild)
         {
-            Console.WriteLine("Type in the length of the array");
+            Console.WriteLine("Type in the length of the array"); 
             Console.Write("Please input a number: ");
             string input = Console.ReadLine();
             int lenInput;
@@ -93,6 +99,7 @@ public class Program
                     Console.WriteLine("Invaild number entered");
                 else
                 {
+                    Console.WriteLine("Unsorted Array:");
                     int[] rand = ArrayGeneration.Generate(lenInput);
                     foreach (var i in rand)
                     {
