@@ -6,7 +6,7 @@ Group Members:
 <!-- Add buttons here -->
 
 The user is presented with a number of sort algorithms to choose from (Console)
-Decision is given via the command line (Console.ReadLine() )
+Decision is given via the command line (Console.ReadLine( ))
 
 The program will then ask for the length of an array again via the command line
 
@@ -22,8 +22,12 @@ The program outputs in order:
 
 Sort algorithms used:
 - BubbleSort
-- MergeSort (iterative or recursive)
+- MergeSort
 - HeapSort
+- SelectionSort
+- InsertionSort
+- QuickSort
+- ShellSort
 - .NET library sort methods
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
