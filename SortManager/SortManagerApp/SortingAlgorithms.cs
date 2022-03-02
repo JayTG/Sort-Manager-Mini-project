@@ -11,8 +11,17 @@ namespace SortManagerApp
 
         public static (int[], int) SortArray(int chosenSort, int[] arrayToSort)
         {
+            int[] sortedArray = {};
             DateTime time = DateTime.Now;
-            int[] sortedArray = SortingAlgorithms.MergeArrays(arrayToSort);
+            switch (chosenSort)
+            {
+                case 1:
+                    sortedArray = SortingAlgorithms.BubbleSortArray(arrayToSort);
+                    break;
+                case 2:
+                    sortedArray = SortingAlgorithms.MergeArrays(arrayToSort);
+                    break;
+            }
             time.Subtract(DateTime.Now);
             return (sortedArray, time.Millisecond);
         }

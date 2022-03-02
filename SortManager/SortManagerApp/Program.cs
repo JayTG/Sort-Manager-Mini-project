@@ -60,7 +60,7 @@ public class Program
         
         while (!vaild)
         {
-            Console.WriteLine("Type in the length of the array"); 
+            Console.WriteLine("Type in the length of the array "); 
             Console.Write("Please input a number: ");
             string input = Console.ReadLine();
             int lenInput;
@@ -96,7 +96,7 @@ public class Program
             Console.Write($"{i}, ");
         }
         Console.WriteLine("");
-        Console.WriteLine($"Time taken: {time}");
+        Console.WriteLine($"Time taken: {time}ms");
     }
     //public static int[] BubbleSort(int[] arr)
     //{
