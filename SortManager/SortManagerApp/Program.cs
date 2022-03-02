@@ -31,7 +31,7 @@ public class Program
         while (!chosen)
         {
             Console.WriteLine("Available sorting algorithms.");
-            Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap, [4] Selection, [5] Insertion, [7] Shell | [0] Quit");
+            Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap, [4] Selection, [5] Insertion, [6] Quick, [7] Shell | [0] Quit");
             Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
 
@@ -68,6 +68,11 @@ public class Program
                         chosen = true;
                         algorithm = new InsertionSort();
                         break ;
+                     case 6:
+                        chosenText = "Quick Sort";
+                        chosen = true;
+                        algorithm = new QuickSort();
+                        break;
                     case 7:
                         chosenText = "Shell Sort";
                         chosen = true;
@@ -120,7 +125,6 @@ public class Program
         int j = 0;
         string arrayString = "{";
         foreach (var i in array)
-
         {
             if (++j % 15 == 0) arrayString += $"{i},".PadLeft(6).PadRight(3) + "\n ";
             else arrayString += $"{i},".PadLeft(6).PadRight(3);
