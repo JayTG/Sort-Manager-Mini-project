@@ -67,7 +67,7 @@ public class Program
                         chosenText = "Insertion Sort";
                         chosen = true;
                         algorithm = new InsertionSort();
-                        break ;
+                        break;
                     case 7:
                         chosenText = "Shell Sort";
                         chosen = true;
