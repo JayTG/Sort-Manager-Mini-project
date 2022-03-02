@@ -140,7 +140,7 @@ Ideally, you should keep the README simple. If you need to add more complex expl
 Sort manager is a console application and as such doesn't have GUI, everything is run with command-lines. 
 Program stores following variables globally.
 ```
-	public static int[] arrayToSort;
+    public static int[] arrayToSort;
     public static int[] sortedArray;
     public static int chosenSort; 				//	Parsed ReadLine
     public static int time = 0; 				//	Temporary global variable that stores time it took for the algorithm to finish (in Milliseconds )
