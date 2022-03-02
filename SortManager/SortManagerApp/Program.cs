@@ -10,35 +10,36 @@ public class Program
         ChooseLength();
         //set array length here
         //Adam testing space
-        int[] test = { 4,5,2,7,3}; // {2,3,4,5,7}
-        DateTime time = DateTime.Now;
-        int[] sortedArray = SortingAlgorithms.MergeArrays(test);
-        time.Subtract(DateTime.Now);
-        foreach(var i in test)
-        {
-            Console.Write($"{i}, ");
-        }
-        Console.WriteLine();
-        foreach (var i in sortedArray)
-        {
-            Console.Write($"{i}, ");
-        }
-        Console.WriteLine($"It took exactly: {time.Millisecond}ms");
-        
-        int[] test2 = { 4,5,2,7,3,7}; // {2,3,4,5,7}
-        DateTime time2 = DateTime.Now;
-        int[] sortedArray2 = SortingAlgorithms.BubbleSortArray(test2);
-        time2.Subtract(DateTime.Now);
-        foreach(var i in test2)
-        {
-            Console.Write($"{i}, ");
-        }
-        Console.WriteLine();
-        foreach (var i in sortedArray2)
-        {
-            Console.Write($"{i}, ");
-        }
-        Console.WriteLine($"It took exactly: {time2.Millisecond}ms");
+        //int[] test = { 4, 5, 2, 7, 3 }; // {2,3,4,5,7}
+        //DateTime time = DateTime.Now;
+        //int[] sortedArray = SortingAlgorithms.MergeArrays(test);
+        //time.Subtract(DateTime.Now);
+        //foreach (var i in test)
+        //{
+        //    Console.Write($"{i}, ");
+        //}
+        //Console.WriteLine();
+        //foreach (var i in sortedArray)
+        //{
+        //    Console.Write($"{i}, ");
+        //}
+        //Console.WriteLine($"It took exactly: {time.Millisecond}ms");
+
+        //int[] test2 = { 4, 5, 2, 7, 3, 7 }; // {2,3,4,5,7}
+        //DateTime time2 = DateTime.Now;
+        //int[] sortedArray2 = SortingAlgorithms.BubbleSortArray(test2);
+        //time2.Subtract(DateTime.Now);
+        //foreach (var i in test2)
+        //{
+        //    Console.Write($"{i}, ");
+        //}
+        //Console.WriteLine();
+        //foreach (var i in sortedArray2)
+        //{
+        //    Console.Write($"{i}, ");
+        //}
+       // Console.WriteLine($"It took exactly: {time2.Millisecond}ms");
+
         //EndOfAdamTestingSpace
     }
 
@@ -50,22 +51,29 @@ public class Program
             Console.WriteLine("Choose an sorting algorithm.");
             Console.WriteLine("[1] Bubble, [2] Merge");
             Console.Write("Please input a number: ");
-            int input = Convert.ToInt32(Console.ReadLine());
-            switch (input)
+            string input = Console.ReadLine();
+            int num;
+
+            if (Int32.TryParse(input, out num))
             {
-                case 1:
-                    Console.WriteLine("You have choosen the Bubble Sort!");
-                    chosen = true;
-                    break;
-                case 2:
-                    Console.WriteLine("You have choosen the Merge Sort!");
-                    chosen = true;
-                    break;
-                default:
-                    Console.WriteLine("Invaild number entered");
-                    break;
+                switch (num)
+                {
+                    case 1:
+                        Console.WriteLine("You have choosen the Bubble Sort!");
+                        chosen = true;
+                        break;
+                    case 2:
+                        Console.WriteLine("You have choosen the Merge Sort!");
+                        chosen = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invaild number entered");
+                        break;
+                }
             }
-            
+            else
+                continue;
+
         }
     }
 
@@ -80,9 +88,17 @@ public class Program
             if (lenInput < 1)
                 Console.WriteLine("Invaild number entered");
             else
+            {
+                int[] rand = ArrayGeneration.Generate(lenInput);
+                foreach (var i in rand)
+                {
+                    Console.Write($"{i}, ");
+                }
                 break;
+            }
+                
         }
-        
+      
     }
     //public static int[] BubbleSort(int[] arr)
     //{
