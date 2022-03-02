@@ -31,7 +31,7 @@ public class Program
         while (!chosen)
         {
             Console.WriteLine("Available sorting algorithms.");
-            Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap, [5] Insertion| [0] Quit");
+            Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap, [4] Selection, [5] Insertion, [7] Shell | [0] Quit");
             Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
 
@@ -58,11 +58,21 @@ public class Program
                         chosen = true;
                         algorithm = new HeapSort();
                         break;
+                    case 4:
+                        chosenText = "Selection Sort";
+                        chosen = true;
+                        algorithm = new SelectionSort();
+                        break;
                     case 5:
                         chosenText = "Insertion Sort";
                         chosen = true;
                         algorithm = new InsertionSort();
                         break ;
+                    case 7:
+                        chosenText = "Shell Sort";
+                        chosen = true;
+                        algorithm = new ShellSort();
+                        break;
                     default:
                         Console.WriteLine("\nInvaild selection, please try again.\n");
                         break;
@@ -140,18 +150,18 @@ public class Program
     //{
     //    throw new NotImplementedException();
     //}
-    public static int[] SelectionSort(int[] arr)
-    {
-        throw new NotImplementedException();
-    }
+    //public static int[] SelectionSort(int[] arr)
+    //{
+    //    throw new NotImplementedException();
+    //}
     public static int[] InsertionSort(int[] arr)
     {
         throw new NotImplementedException();
     }
-    public static int[] ShellSort(int[] arr)
-    {
-        throw new NotImplementedException();
-    }
+    //public static int[] ShellSort(int[] arr)
+    //{
+    //    throw new NotImplementedException();
+    //}
     public static int[] QuickSort(int[] arr)
     {
         throw new NotImplementedException();
