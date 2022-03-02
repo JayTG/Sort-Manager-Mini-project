@@ -137,6 +137,39 @@ You could also give specific instructions to how they can setup their developmen
 
 Ideally, you should keep the README simple. If you need to add more complex explanations, use a wiki. Check out [this wiki](https://github.com/navendu-pottekkat/nsfw-filter/wiki) for inspiration. -->
 
+Sort manager is a console application and as such doesn't have GUI, everything is run with command-lines. 
+Program stores following variables globally.
+```
+	public static int[] arrayToSort;
+    public static int[] sortedArray;
+    public static int chosenSort; 				//	Parsed ReadLine
+    public static int time = 0; 				//	Temporary global variable that stores time it took for the algorithm to finish (in Milliseconds )
+    public static bool running = true;  		// 	Boolean that runs the program loop
+    public static ISortingAlgorithm algorithm;  // 	Interface object that holds the SortingClass that has been chosen
+    public static string chosenText; 			//	Temporary global variable that stores the output string
+```
+
+Here's the Main() method:
+```
+do
+	Main()
+	{
+        do{
+            ChooseSorting();
+            ChooseLength();
+            DisplaySortedArray();
+        }
+        while (true);
+		}
+```
+
+`ChooseSorting()` method is responsible for displaying available sorting methods. It awaits user input with ReadLine and then assigns `ISortingAlgorithm algorithm` accordingly.
+`ChooseLength()` method is responsible for Generating the unsorted array. It awaits user input with ReadLine again and creates an array with according length and fills it with random integers in a range of <-100;100> and then display it to the user
+Right after that `DisplaySortedArray()` sorts the created array by calling `SortArray(int [])` method from the `algorithm` interface and then displays it to the user.
+
+As long as user doesn't input `0` while choosing the sort array within `ChooseSorting()` program runs in a loop.
+
+
 # Contribute
 [(Back to top)](#table-of-contents)
 
