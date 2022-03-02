@@ -1,6 +1,6 @@
 # Project-title
 
-***Sort-Manager-Mini-project***
+##*Sort-Manager-Mini-project*##
 <!-- Add banner here -->
 *Adam*
 *Dmitry*
@@ -26,6 +26,7 @@ The program outputs in order:
 Sort algorithms used:
 - BubbleSort
 - MergeSort (iterative or recursive)
+- HeapSort
 - .NET library sort methods
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
@@ -115,6 +116,7 @@ To use this project, first clone the repo on your device using the command below
 
 <!-- This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also. -->
 
+
 # Development
 [(Back to top)](#table-of-contents)
 
@@ -171,7 +173,7 @@ I personally add the name of the license and provide a link to it like below. --
 
 Let's make it an image because by now you have realised that multimedia in images == cool(*please notice the subtle programming joke). -->
 
-Leave a star in GitHub, give a clap in Medium and share this guide if you found this helpful.
+Leave a star in GitHub, give a clap in Medium and share this code.
 
 <!-- Add the footer here -->
 
