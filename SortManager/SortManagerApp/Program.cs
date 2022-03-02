@@ -59,15 +59,15 @@ public class Program
                         //chosenSort = num;
                         break;
                     default:
-                        Console.WriteLine("Invaild selection, please try again.\n");
+                        Console.WriteLine("\nInvaild selection, please try again.\n");
                         break;
                 }
-                Console.WriteLine($"\nYou have chosen {chosenText}.");
             }
             else
                 continue;
-
         }
+        Console.WriteLine($"\nYou have chosen {chosenText}.");
+
     }
 
     static void ChooseLength()
