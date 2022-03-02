@@ -29,5 +29,22 @@ namespace SortManagerTest
         {
             Assert.AreEqual(sorted, SortingAlgorithms.MergeArrays(unsorted));
         }
+        [Test]
+        public void RandomArrayContainsNumbersBetween_Minus100And100()
+        {
+            int[] rand = ArrayGeneration.Generate(101);
+            Assert.That(rand, Is.All.GreaterThan(-101));
+            Assert.That(rand, Is.All.LessThan(101));
+        }
+        [TestCase(0)]
+        [TestCase(1)]
+        [TestCase(100)]
+        [TestCase(500)]
+        [TestCase(10000)]
+        public void RandomArrayLengthIsEqualToUserInput(int leng)
+        {
+            int[] rand = ArrayGeneration.Generate(leng);
+            Assert.That(rand.Length, Is.EqualTo(leng));
+        }
     }
 }
