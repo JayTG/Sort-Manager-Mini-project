@@ -33,7 +33,6 @@ public class Program
             Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap | [0] Quit");
             Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
-            //int num;
 
             if (Int32.TryParse(input, out chosenSort))
             {
@@ -46,17 +45,14 @@ public class Program
                     case 1:
                         chosenText = "Bubble Sort";
                         chosen = true;
-                        //chosenSort = num;
                         break;
                     case 2:
                         chosenText = "Merge Sort";
                         chosen = true;
-                        //chosenSort = num;
                         break;
                     case 3:
                         chosenText = "Heap Sort";
                         chosen = true;
-                        //chosenSort = num;
                         break;
                     default:
                         Console.WriteLine("\nInvaild selection, please try again.\n");
@@ -83,7 +79,7 @@ public class Program
             if(Int32.TryParse(input,out lenInput))
             {
                 if (lenInput < 1 || lenInput > 25)
-                    Console.WriteLine("Invaild array length, please try again.");
+                    Console.WriteLine("\nInvaild array length, please try again.\n");
                 else
                 {
                     Console.WriteLine("\nUnsorted Array:");
@@ -117,7 +113,7 @@ public class Program
         Console.WriteLine("Sorted Array");
         (sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
         Console.WriteLine(GetArrayString(sortedArray));
-        Console.WriteLine($"\nTime taken: {time}ms");
+        Console.WriteLine($"\nTime taken: {time}ms\n");
     }
 
     //public static int[] BubbleSort(int[] arr)
