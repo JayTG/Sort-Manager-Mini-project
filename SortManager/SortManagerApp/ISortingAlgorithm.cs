@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortManagerApp
 {
-    internal interface ISortingAlgorithm
+    public interface ISortingAlgorithm
     {
         (int[], int) SortArray(int chosenSort, int[] arrayToSort)
         {
