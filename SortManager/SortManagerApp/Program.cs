@@ -31,7 +31,7 @@ public class Program
         while (!chosen)
         {
             Console.WriteLine("Available sorting algorithms.");
-            Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap | [0] Quit");
+            Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap, [5] Insertion| [0] Quit");
             Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
 
@@ -58,6 +58,11 @@ public class Program
                         chosen = true;
                         algorithm = new HeapSort();
                         break;
+                    case 5:
+                        chosenText = "Insertion Sort";
+                        chosen = true;
+                        algorithm = new InsertionSort();
+                        break ;
                     default:
                         Console.WriteLine("\nInvaild selection, please try again.\n");
                         break;

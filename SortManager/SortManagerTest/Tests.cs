@@ -38,6 +38,12 @@ namespace SortManagerTest
             ISortingAlgorithm algorithm = new HeapSort();
             Assert.AreEqual(sorted, algorithm.Sort(unsorted));
         }
+        [TestCaseSource("_ArraysToTest")]
+        public void InsertSortTest(int[] unsorted, int[] sorted)
+        {
+            ISortingAlgorithm algorithm = new InsertionSort();
+            Assert.AreEqual(sorted, algorithm.Sort(unsorted));
+        }
         [Test]
         public void RandomArrayContainsNumbersBetween_Minus100And100()
         {
