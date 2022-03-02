@@ -33,9 +33,30 @@ namespace SortManagerTest
         }
 
         [TestCaseSource("_ArraysToTest")]
+        public void SelectionSortTest(int[] unsorted, int[] sorted)
+        {
+            ISortingAlgorithm algorithm = new SelectionSort();
+            Assert.AreEqual(sorted, algorithm.Sort(unsorted));
+        }
+
+        [TestCaseSource("_ArraysToTest")]
         public void HeapeSortTest(int[] unsorted, int[] sorted)
         {
             ISortingAlgorithm algorithm = new HeapSort();
+            Assert.AreEqual(sorted, algorithm.Sort(unsorted));
+        }
+
+        [TestCaseSource("_ArraysToTest")]
+        public void ShellSortTest(int[] unsorted, int[] sorted)
+        {
+            ISortingAlgorithm algorithm = new ShellSort();
+            Assert.AreEqual(sorted, algorithm.Sort(unsorted));
+         }
+      
+        [TestCaseSource("_ArraysToTest")]
+        public void InsertSortTest(int[] unsorted, int[] sorted)
+        {
+            ISortingAlgorithm algorithm = new InsertionSort();
             Assert.AreEqual(sorted, algorithm.Sort(unsorted));
         }
         [Test]

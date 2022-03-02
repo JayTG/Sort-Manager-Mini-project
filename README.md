@@ -1,10 +1,7 @@
-# Project-title
-
-***Sort-Manager-Mini-project***
+# *Sort-Manager-Mini-project*
 <!-- Add banner here -->
-*Adam*
-*Dmitry*
-*Jay*
+Group Members:
+*Adam*, *Dmitry*, *Jay*
 
 <!-- Add buttons here -->
 
@@ -26,6 +23,7 @@ The program outputs in order:
 Sort algorithms used:
 - BubbleSort
 - MergeSort (iterative or recursive)
+- HeapSort
 - .NET library sort methods
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
@@ -62,6 +60,7 @@ I use [**Shields IO**](https://shields.io/) for making badges. It is a simple an
 ![Tweet](https://img.shields.io/twitter/url?style=flat-square&logo=twitter&url=https%3A%2F%2Fnavendu.me%2Fnsfw-filter%2Findex.html): This is not essential but it is a cool way to let others know about your project! Clicking this button automatically opens twitter and writes a tweet about your project and link to it. All the user has to do is to click tweet. Isn't that neat? -->
 
 # Demo-Preview
+![Demo Preview](DemoPreview.png)
 
 <!-- Add a demo for your project -->
 
@@ -77,7 +76,7 @@ Here is a random GIF as a placeholder.
 
 Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README. -->
 
-- [Project Title](#project-title)
+- [Project Title](#Sort-Manager-Mini-project)
 - [Demo-Preview](#demo-preview)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
@@ -89,8 +88,14 @@ Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README
 - [License](#license)
 - [Footer](#footer)
 
+# Dependencies
+- Visual Studio
+- Windows OS
+
 # Installation
 [(Back to top)](#table-of-contents)
+
+Download whole project and open `SortManager.sln` inside Visual Studio. Use ***Visual Studio 2022*** for the best compatibility.
 
 <!-- *You might have noticed the **Back to top** button(if not, please notice, it's right there!). This is a good idea because it makes your README **easy to navigate.*** 
 
@@ -113,7 +118,16 @@ To use this project, first clone the repo on your device using the command below
 # Usage
 [(Back to top)](#table-of-contents)
 
-<!-- This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also. -->
+- Lauch the SortManagerApp in Visual Studio.
+- A console window will open displaying the avaliable sorting algorithms to choose from.
+- A number input is required to pick the algorithm (Type 0 to quit the application).
+- After a algorithm has been chosen, the length of the array to be sorted is required. 
+- The input for the length cannot be less than 1 or greater than the max limit (10000)
+- Finally when the length is added a random array will be generated. 
+- The unsorted and sorted versions of the array will be displayed 
+- Addtionally the time taken to perform the sorted is displayed.
+- The program will return to the beginning where they can choose a sorting algorithm .
+
 
 # Development
 [(Back to top)](#table-of-contents)
@@ -125,6 +139,39 @@ You could give **instructions in depth** of **how the code works** and how every
 You could also give specific instructions to how they can setup their development environment.
 
 Ideally, you should keep the README simple. If you need to add more complex explanations, use a wiki. Check out [this wiki](https://github.com/navendu-pottekkat/nsfw-filter/wiki) for inspiration. -->
+
+Sort manager is a console application and as such doesn't have GUI, everything is run with command-lines. 
+Program stores following variables globally.
+```
+    public static int[] arrayToSort;
+    public static int[] sortedArray;
+    public static int chosenSort; 				//	Parsed ReadLine
+    public static int time = 0; 				//	Temporary global variable that stores time it took for the algorithm to finish (in Milliseconds )
+    public static bool running = true;  		// 	Boolean that runs the program loop
+    public static ISortingAlgorithm algorithm;  // 	Interface object that holds the SortingClass that has been chosen
+    public static string chosenText; 			//	Temporary global variable that stores the output string
+```
+
+Here's the Main() method:
+```
+do
+	Main()
+	{
+        do{
+            ChooseSorting();
+            ChooseLength();
+            DisplaySortedArray();
+        }
+        while (true);
+		}
+```
+
+`ChooseSorting()` method is responsible for displaying available sorting methods. It awaits user input with ReadLine and then assigns `ISortingAlgorithm algorithm` accordingly.
+`ChooseLength()` method is responsible for Generating the unsorted array. It awaits user input with ReadLine again and creates an array with according length and fills it with random integers in a range of <-100;100> and then display it to the user
+Right after that `DisplaySortedArray()` sorts the created array by calling `SortArray(int [])` method from the `algorithm` interface and then displays it to the user.
+
+As long as user doesn't input `0` while choosing the sort array within `ChooseSorting()` program runs in a loop.
+
 
 # Contribute
 [(Back to top)](#table-of-contents)
@@ -171,7 +218,7 @@ I personally add the name of the license and provide a link to it like below. --
 
 Let's make it an image because by now you have realised that multimedia in images == cool(*please notice the subtle programming joke). -->
 
-Leave a star in GitHub, give a clap in Medium and share this guide if you found this helpful.
+Leave a star in GitHub, give a clap in Medium and share this code.
 
 <!-- Add the footer here -->
 
