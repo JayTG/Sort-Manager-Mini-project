@@ -1,4 +1,4 @@
-# Project-title
+# Sort Manager
 
 ***Sort-Manager-Mini-project***
 <!-- Add banner here -->
