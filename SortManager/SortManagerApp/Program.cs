@@ -13,9 +13,9 @@ public class Program
     {
         ChooseSorting();
         ChooseLength();
+        DisplaySortedArray();
         //arrayToSort = new int[]{4,5,2,7,3};
         //(sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
-        //set array length here
     }
 
     public static void ChooseSorting()
@@ -85,6 +85,18 @@ public class Program
             }
         }
       
+    }
+    static void DisplaySortedArray()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("Sorted Array");
+        (sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
+        foreach (var i in sortedArray)
+        {
+            Console.Write($"{i}, ");
+        }
+        Console.WriteLine("");
+        Console.WriteLine($"Time taken: {time}");
     }
     //public static int[] BubbleSort(int[] arr)
     //{
