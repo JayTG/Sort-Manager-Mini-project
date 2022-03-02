@@ -6,13 +6,14 @@ public class Program
 {
     public static int[] arrayToSort;
     public static int[] sortedArray;
-    public static int chosenSort = 0;
+    public static int chosenSort;
     public static int time = 0;
+    public static bool running = true;
+    public static ISortingAlgorithm algorithm;
     public static string chosenText;
 
     public static void Main()
     {
-        
         do
         {
             ChooseSorting();
@@ -45,14 +46,17 @@ public class Program
                     case 1:
                         chosenText = "Bubble Sort";
                         chosen = true;
+                        algorithm = new BubbleSort();
                         break;
                     case 2:
                         chosenText = "Merge Sort";
                         chosen = true;
+                        algorithm = new MergeSort();
                         break;
                     case 3:
-                        chosenText = "Heap Sort";
+                        Console.WriteLine("\nYou have choosen the Heap Sort!");
                         chosen = true;
+                        algorithm = new HeapSort();
                         break;
                     default:
                         Console.WriteLine("\nInvaild selection, please try again.\n");
@@ -111,7 +115,7 @@ public class Program
     {
         Console.WriteLine("");
         Console.WriteLine("Sorted Array");
-        (sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
+        (sortedArray, time) = algorithm.SortArray(chosenSort, arrayToSort);
         Console.WriteLine(GetArrayString(sortedArray));
         Console.WriteLine($"\nTime taken: {time}ms\n");
     }
