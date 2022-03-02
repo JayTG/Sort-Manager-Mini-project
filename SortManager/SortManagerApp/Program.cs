@@ -76,7 +76,7 @@ public class Program
         
         while (!vaild)
         {
-            Console.WriteLine("Generate unsorted array.");
+            Console.WriteLine("Generate unsorted array. (max length 25)");
             Console.Write("To generate, enter array length: ");
             string input = Console.ReadLine();
             int lenInput;
@@ -86,12 +86,9 @@ public class Program
                     Console.WriteLine("Invaild array length, please try.");
                 else
                 {
-                    Console.WriteLine("Unsorted Array:");
+                    Console.WriteLine("\nUnsorted Array:");
                     arrayToSort = ArrayGeneration.Generate(lenInput);
-                    foreach (var i in arrayToSort)
-                    {
-                        Console.Write($"{i}, ");
-                    }
+                    Console.WriteLine(GetArrayString(arrayToSort));
                     break;
                 }
             }
@@ -102,17 +99,25 @@ public class Program
         }
       
     }
+
+    static string GetArrayString(int[] array)
+    {
+        string arrayString = "{";
+        foreach (var i in array)
+        {
+            arrayString += $" {i},";
+        }
+        return arrayString.TrimEnd(',') + " }";
+    }
+
+
     static void DisplaySortedArray()
     {
         Console.WriteLine("");
         Console.WriteLine("Sorted Array");
         (sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
-        foreach (var i in sortedArray)
-        {
-            Console.Write($"{i}, ");
-        }
-        Console.WriteLine("");
-        Console.WriteLine($"Time taken: {time}ms");
+        Console.WriteLine(GetArrayString(sortedArray));
+        Console.WriteLine($"\nTime taken: {time}ms");
     }
     //public static int[] BubbleSort(int[] arr)
     //{
