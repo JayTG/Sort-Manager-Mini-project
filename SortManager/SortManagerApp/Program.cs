@@ -107,7 +107,7 @@ public class Program
         foreach (var i in array)
 
         {
-            if (++j % 25 == 0) arrayString += $"{i},".PadLeft(6).PadRight(3) + "\n ";
+            if (++j % 15 == 0) arrayString += $"{i},".PadLeft(6).PadRight(3) + "\n ";
             else arrayString += $"{i},".PadLeft(6).PadRight(3);
         }
         return arrayString.TrimEnd(',') + "}";
