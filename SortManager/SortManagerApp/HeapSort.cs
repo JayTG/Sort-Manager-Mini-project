@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortManagerApp
 {
-    internal class HeapSort : ISortingAlgorithm
+    public class HeapSort : ISortingAlgorithm
     {
         public int[] Sort(int[] array)
         {
