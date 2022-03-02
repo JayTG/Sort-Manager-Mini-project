@@ -10,17 +10,17 @@ public class Program
     public static int time = 0;
     public static bool running = true;
     public static ISortingAlgorithm algorithm;
+    public static string chosenText;
 
     public static void Main()
     {
         do
         {
             ChooseSorting();
-            if (!running) break;
             ChooseLength();
             DisplaySortedArray();
         }
-        while (running);
+        while (true);
         //arrayToSort = new int[]{4,5,2,7,3};
         //(sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
     }
@@ -34,23 +34,22 @@ public class Program
             Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap | [0] Quit");
             Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
-            int num;
 
-            if (Int32.TryParse(input, out num))
+            if (Int32.TryParse(input, out chosenSort))
             {
-                switch (num)
+                switch (chosenSort)
                 {
                     case 0:
-                        Console.WriteLine("Quitting App");
-                        running = false;
+                        Console.WriteLine("\nQuitting App");
+                        System.Environment.Exit(0);
                         break;
                     case 1:
-                        Console.WriteLine("\nYou have chosen Bubble Sort.");
+                        chosenText = "Bubble Sort";
                         chosen = true;
                         algorithm = new BubbleSort();
                         break;
                     case 2:
-                        Console.WriteLine("\nYou have chosen Merge Sort.");
+                        chosenText = "Merge Sort";
                         chosen = true;
                         algorithm = new MergeSort();
                         break;
@@ -60,14 +59,15 @@ public class Program
                         algorithm = new HeapSort();
                         break;
                     default:
-                        Console.WriteLine("Invaild selection, please try again.\n");
+                        Console.WriteLine("\nInvaild selection, please try again.\n");
                         break;
                 }
             }
             else
                 continue;
-
         }
+        Console.WriteLine($"\nYou have chosen {chosenText}.");
+
     }
 
     static void ChooseLength()
@@ -76,22 +76,19 @@ public class Program
         
         while (!vaild)
         {
-            Console.WriteLine("Generate unsorted array.");
+            Console.WriteLine("Generate unsorted array. (max length 25)");
             Console.Write("To generate, enter array length: ");
             string input = Console.ReadLine();
             int lenInput;
             if(Int32.TryParse(input,out lenInput))
             {
-                if (lenInput < 1)
-                    Console.WriteLine("Invaild array length, please try.");
+                if (lenInput < 1 || lenInput > 25)
+                    Console.WriteLine("\nInvaild array length, please try again.\n");
                 else
                 {
-                    Console.WriteLine("Unsorted Array:");
+                    Console.WriteLine("\nUnsorted Array:");
                     arrayToSort = ArrayGeneration.Generate(lenInput);
-                    foreach (var i in arrayToSort)
-                    {
-                        Console.Write($"{i}, ");
-                    }
+                    Console.WriteLine(GetArrayString(arrayToSort));
                     break;
                 }
             }
@@ -102,18 +99,27 @@ public class Program
         }
       
     }
+
+    static string GetArrayString(int[] array)
+    {
+        string arrayString = "{";
+        foreach (var i in array)
+        {
+            arrayString += $" {i},";
+        }
+        return arrayString.TrimEnd(',') + " }";
+    }
+
+
     static void DisplaySortedArray()
     {
         Console.WriteLine("");
         Console.WriteLine("Sorted Array");
         (sortedArray, time) = algorithm.SortArray(chosenSort, arrayToSort);
-        foreach (var i in sortedArray)
-        {
-            Console.Write($"{i}, ");
-        }
-        Console.WriteLine("");
-        Console.WriteLine($"Time taken: {time}ms");
+        Console.WriteLine(GetArrayString(sortedArray));
+        Console.WriteLine($"\nTime taken: {time}ms\n");
     }
+
     //public static int[] BubbleSort(int[] arr)
     //{
     //    throw new NotImplementedException();
