@@ -79,23 +79,31 @@ public class Program
     static void ChooseLength()
     {
         bool vaild = false;
+        
         while (!vaild)
         {
             Console.WriteLine("Type in the length of the array");
             Console.Write("Please input a number: ");
-            int lenInput = Convert.ToInt32(Console.ReadLine());
-            if (lenInput < 1)
-                Console.WriteLine("Invaild number entered");
+            string input = Console.ReadLine();
+            int lenInput;
+            if(Int32.TryParse(input,out lenInput))
+            {
+                if (lenInput < 1)
+                    Console.WriteLine("Invaild number entered");
+                else
+                {
+                    int[] rand = ArrayGeneration.Generate(lenInput);
+                    foreach (var i in rand)
+                    {
+                        Console.Write($"{i}, ");
+                    }
+                    break;
+                }
+            }
             else
             {
-                int[] rand = ArrayGeneration.Generate(lenInput);
-                foreach (var i in rand)
-                {
-                    Console.Write($"{i}, ");
-                }
-                break;
+                continue;
             }
-                
         }
 
     }
