@@ -8,12 +8,19 @@ public class Program
     public static int[] sortedArray;
     public static int chosenSort = 0;
     public static int time = 0;
+    public static bool running = true;
 
     public static void Main()
     {
-        ChooseSorting();
-        ChooseLength();
-        DisplaySortedArray();
+        
+        do
+        {
+            ChooseSorting();
+            if (!running) break;
+            ChooseLength();
+            DisplaySortedArray();
+        }
+        while (running);
         //arrayToSort = new int[]{4,5,2,7,3};
         //(sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
     }
@@ -24,7 +31,7 @@ public class Program
         while (!chosen)
         {
             Console.WriteLine("Available sorting algorithms.");
-            Console.WriteLine("[1] Bubble, [2] Merge");
+            Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap | [0] Quit");
             Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
             int num;
@@ -33,6 +40,10 @@ public class Program
             {
                 switch (num)
                 {
+                    case 0:
+                        Console.WriteLine("Quitting App");
+                        running = false;
+                        break;
                     case 1:
                         Console.WriteLine("\nYou have chosen Bubble Sort.");
                         chosen = true;
@@ -40,6 +51,11 @@ public class Program
                         break;
                     case 2:
                         Console.WriteLine("\nYou have chosen Merge Sort.");
+                        chosen = true;
+                        chosenSort = num;
+                        break;
+                    case 3:
+                        Console.WriteLine("You have choosen the Heap Sort!");
                         chosen = true;
                         chosenSort = num;
                         break;
@@ -106,10 +122,10 @@ public class Program
     //{
     //    throw new NotImplementedException();
     //}
-    public static int[] HeapSort(int[] arr)
-    {
-        throw new NotImplementedException();
-    }
+    //public static int[] HeapSort(int[] arr)
+    //{
+    //    throw new NotImplementedException();
+    //}
     public static int[] SelectionSort(int[] arr)
     {
         throw new NotImplementedException();
