@@ -4,50 +4,21 @@ namespace SortManagerApp;
 
 public class Program
 {
-    public int[] arrayToSort;
+    public static int[] arrayToSort;
     public static int[] sortedArray;
     public static int chosenSort = 0;
+    public static int time = 0;
 
     public static void Main()
     {
         ChooseSorting();
         ChooseLength();
+        //arrayToSort = new int[]{4,5,2,7,3};
+        //(sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
         //set array length here
-        //Adam testing space
-        //int[] test = { 4, 5, 2, 7, 3 }; // {2,3,4,5,7}
-        //DateTime time = DateTime.Now;
-        //int[] sortedArray = SortingAlgorithms.MergeArrays(test);
-        //time.Subtract(DateTime.Now);
-        //foreach (var i in test)
-        //{
-        //    Console.Write($"{i}, ");
-        //}
-        //Console.WriteLine();
-        //foreach (var i in sortedArray)
-        //{
-        //    Console.Write($"{i}, ");
-        //}
-        //Console.WriteLine($"It took exactly: {time.Millisecond}ms");
-
-        //int[] test2 = { 4, 5, 2, 7, 3, 7 }; // {2,3,4,5,7}
-        //DateTime time2 = DateTime.Now;
-        //int[] sortedArray2 = SortingAlgorithms.BubbleSortArray(test2);
-        //time2.Subtract(DateTime.Now);
-        //foreach (var i in test2)
-        //{
-        //    Console.Write($"{i}, ");
-        //}
-        //Console.WriteLine();
-        //foreach (var i in sortedArray2)
-        //{
-        //    Console.Write($"{i}, ");
-        //}
-       // Console.WriteLine($"It took exactly: {time2.Millisecond}ms");
-
-        //EndOfAdamTestingSpace
     }
 
-    static void ChooseSorting()
+    public static void ChooseSorting()
     {
         bool chosen = false;
         while (!chosen)

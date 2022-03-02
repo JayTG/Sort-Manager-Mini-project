@@ -8,6 +8,16 @@ namespace SortManagerApp
 {
     public class SortingAlgorithms
     {
+
+        public static (int[], int) SortArray(int chosenSort, int[] arrayToSort)
+        {
+            DateTime time = DateTime.Now;
+            int[] sortedArray = SortingAlgorithms.MergeArrays(arrayToSort);
+            time.Subtract(DateTime.Now);
+            return (sortedArray, time.Millisecond);
+        }
+
+
         public static int[] BubbleSortArray(int[] intArray)
         {
             int temp;
@@ -36,6 +46,8 @@ namespace SortManagerApp
             while (sorting);
             return copy;
         }
+
+
         public static int[] MergeArrays(int[] array)
         {
             int[] left;
