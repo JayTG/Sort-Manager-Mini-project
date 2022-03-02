@@ -4,7 +4,7 @@ namespace SortManagerApp;
 
 public class Program
 {
-    public int[] arrayToSort;
+    public static int[] arrayToSort;
     public static int[] sortedArray;
     public static int chosenSort = 0;
 
@@ -100,8 +100,8 @@ public class Program
                 else
                 {
                     Console.WriteLine("Unsorted Array:");
-                    int[] rand = ArrayGeneration.Generate(lenInput);
-                    foreach (var i in rand)
+                    arrayToSort = ArrayGeneration.Generate(lenInput);
+                    foreach (var i in arrayToSort)
                     {
                         Console.Write($"{i}, ");
                     }
