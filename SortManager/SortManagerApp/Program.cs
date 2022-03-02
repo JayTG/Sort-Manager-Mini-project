@@ -76,13 +76,13 @@ public class Program
         
         while (!vaild)
         {
-            Console.WriteLine("Generate unsorted array. (max length 25)");
+            Console.WriteLine("Generate unsorted array. (max length 10000)");
             Console.Write("To generate, enter array length: ");
             string input = Console.ReadLine();
             int lenInput;
             if(Int32.TryParse(input,out lenInput))
             {
-                if (lenInput < 1 || lenInput > 25)
+                if (lenInput < 1 || lenInput > 10000)
                     Console.WriteLine("\nInvaild array length, please try again.\n");
                 else
                 {
