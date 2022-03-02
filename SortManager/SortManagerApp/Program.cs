@@ -8,6 +8,7 @@ public class Program
     public static int[] sortedArray;
     public static int chosenSort = 0;
     public static int time = 0;
+    public static string chosenText;
 
     public static void Main()
     {
@@ -32,35 +33,36 @@ public class Program
             Console.WriteLine("[1] Bubble, [2] Merge, [3] Heap | [0] Quit");
             Console.Write("To select, enter a number: ");
             string input = Console.ReadLine();
-            int num;
+            //int num;
 
-            if (Int32.TryParse(input, out num))
+            if (Int32.TryParse(input, out chosenSort))
             {
-                switch (num)
+                switch (chosenSort)
                 {
                     case 0:
                         Console.WriteLine("Quitting App");
                         System.Environment.Exit(0);
                         break;
                     case 1:
-                        Console.WriteLine("\nYou have chosen Bubble Sort.");
+                        chosenText = "Bubble Sort";
                         chosen = true;
-                        chosenSort = num;
+                        //chosenSort = num;
                         break;
                     case 2:
-                        Console.WriteLine("\nYou have chosen Merge Sort.");
+                        chosenText = "Merge Sort";
                         chosen = true;
-                        chosenSort = num;
+                        //chosenSort = num;
                         break;
                     case 3:
-                        Console.WriteLine("You have choosen the Heap Sort!");
+                        chosenText = "Heap Sort";
                         chosen = true;
-                        chosenSort = num;
+                        //chosenSort = num;
                         break;
                     default:
                         Console.WriteLine("Invaild selection, please try again.\n");
                         break;
                 }
+                Console.WriteLine($"\nYou have chosen {chosenText}.");
             }
             else
                 continue;
@@ -80,8 +82,8 @@ public class Program
             int lenInput;
             if(Int32.TryParse(input,out lenInput))
             {
-                if (lenInput < 1)
-                    Console.WriteLine("Invaild array length, please try.");
+                if (lenInput < 1 || lenInput > 25)
+                    Console.WriteLine("Invaild array length, please try again.");
                 else
                 {
                     Console.WriteLine("\nUnsorted Array:");
