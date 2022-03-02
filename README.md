@@ -1,10 +1,9 @@
-# Project-title
+# Project Title
 
 ##*Sort-Manager-Mini-project*##
 <!-- Add banner here -->
-*Adam*
-*Dmitry*
-*Jay*
+Group Members:
+*Adam*, *Dmitry*, *Jay*
 
 <!-- Add buttons here -->
 
