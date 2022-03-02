@@ -1,6 +1,4 @@
-# Project Title
-
-## *Sort-Manager-Mini-project*
+# *Sort-Manager-Mini-project*
 <!-- Add banner here -->
 Group Members:
 *Adam*, *Dmitry*, *Jay*
