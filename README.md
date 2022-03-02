@@ -1,6 +1,4 @@
-# Sort Manager App
-
-***Sort-Manager-Mini-project***
+# *Sort-Manager-Mini-project*
 <!-- Add banner here -->
 Group Members:
 *Adam*, *Dmitry*, *Jay*
@@ -25,6 +23,7 @@ The program outputs in order:
 Sort algorithms used:
 - BubbleSort
 - MergeSort (iterative or recursive)
+- HeapSort
 - .NET library sort methods
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
@@ -76,7 +75,7 @@ Here is a random GIF as a placeholder.
 
 Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README. -->
 
-- [Project Title](#project-title)
+- [Project Title](#Sort-Manager-Mini-project)
 - [Demo-Preview](#demo-preview)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
@@ -125,6 +124,7 @@ To use this project, first clone the repo on your device using the command below
 - The unsorted and sorted versions of the array will be displayed 
 - Addtionally the time taken to perform the sorted is displayed.
 - The program will return to the beginning where they can choose a sorting algorithm .
+
 
 # Development
 [(Back to top)](#table-of-contents)
@@ -182,7 +182,7 @@ I personally add the name of the license and provide a link to it like below. --
 
 Let's make it an image because by now you have realised that multimedia in images == cool(*please notice the subtle programming joke). -->
 
-Leave a star in GitHub, give a clap in Medium and share this guide if you found this helpful.
+Leave a star in GitHub, give a clap in Medium and share this code.
 
 <!-- Add the footer here -->
 
