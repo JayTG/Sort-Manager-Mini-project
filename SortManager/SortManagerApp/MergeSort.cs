@@ -6,95 +6,9 @@ using System.Threading.Tasks;
 
 namespace SortManagerApp
 {
-    public class SortingAlgorithms
+    internal class MergeSort : ISortingAlgorithm
     {
-
-        public static (int[], int) SortArray(int chosenSort, int[] arrayToSort)
-        {
-            int[] sortedArray = {};
-            DateTime time = DateTime.Now;
-            switch (chosenSort)
-            {
-                case 1:
-                    sortedArray = SortingAlgorithms.BubbleSortArray(arrayToSort);
-                    break;
-                case 2:
-                    sortedArray = SortingAlgorithms.MergeArrays(arrayToSort);
-                    break;
-                case 3:
-                    sortedArray = SortingAlgorithms.HeapSort(arrayToSort);
-                    break;
-            }
-            time.Subtract(DateTime.Now);
-            return (sortedArray, time.Millisecond);
-        }
-
-
-        public static int[] BubbleSortArray(int[] intArray)
-        {
-            int temp;
-            int[] copy = (int[])intArray.Clone();
-
-            bool sorting = true;
-            bool swapped = true;
-            do
-            {
-                if (!swapped)
-                {
-                    sorting = false;
-                }
-                swapped = false;
-                for (int i = 0; i <= copy.Length; i++)
-                {
-                    if (i < copy.Length - 1 && copy[i] > copy[i + 1])
-                    {
-                        temp = copy[i + 1];
-                        copy[i + 1] = copy[i];
-                        copy[i] = temp;
-                        swapped = true;
-                    }
-                }
-            }
-            while (sorting);
-            return copy;
-        }
-        //                                          HEAP
-        private static int[] HeapSort(int[] array)
-        {
-            int[] result = (int[])array.Clone();
-            int n = result.Length;
-            for (int i = n / 2 - 1; i >= 0; i--) 
-            {
-                Heapify(result, n, i); }
-            for (int i = n - 1; i >= 0; i--)
-            {
-                int temp = result[0];
-                result[0] = result[i];
-                result[i] = temp;
-                Heapify(result, i, 0);
-            }
-            return result;
-        }
-
-        private static void Heapify(int[] array, int n, int i)
-        {
-            int largest = i;
-            int left = 2 * i + 1;
-            int right = 2 * i + 2;
-            if (left < n && array[left] > array[largest])
-                largest = left;
-            if (right < n && array[right] > array[largest])
-                largest = right;
-            if (largest != i)
-            {
-                int swap = array[i];
-                array[i] = array[largest];
-                array[largest] = swap;
-                Heapify(array, n, largest);
-            }
-        }
-        //                                  Merge
-        public static int[] MergeArrays(int[] array)
+        public int[] Sort(int[] array)
         {
             int[] left;
             int[] right;
@@ -127,13 +41,14 @@ namespace SortManagerApp
                 x++;
             }
             //Recursively sort the left array
-            left = MergeArrays(left);
+            left = Sort(left);
             //Recursively sort the right array
-            right = MergeArrays(right);
+            right = Sort(right);
             //Merge our two sorted arrays
             result = Merge(left, right);
             return result;
         }
+
         private static int[] Merge(int[] left, int[] right)
         {
             int resultLength = right.Length + left.Length;
@@ -178,7 +93,5 @@ namespace SortManagerApp
             }
             return result;
         }
-
-
     }
 }

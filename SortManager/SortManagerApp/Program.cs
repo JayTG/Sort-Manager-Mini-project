@@ -55,7 +55,7 @@ public class Program
                         chosenSort = num;
                         break;
                     case 3:
-                        Console.WriteLine("You have choosen the Heap Sort!");
+                        Console.WriteLine("\nYou have choosen the Heap Sort!");
                         chosen = true;
                         chosenSort = num;
                         break;
