@@ -21,8 +21,6 @@ public class Program
             DisplaySortedArray();
         }
         while (true);
-        //arrayToSort = new int[]{4,5,2,7,3};
-        //(sortedArray, time) = SortingAlgorithms.SortArray(chosenSort, arrayToSort);
     }
 
     public static void ChooseSorting()
