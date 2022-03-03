@@ -28,7 +28,7 @@ Sort algorithms used:
 - InsertionSort
 - QuickSort
 - ShellSort
-- .NET library sort methods
+<!-- .NET library sort methods -->
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
 
@@ -86,11 +86,11 @@ Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README
 - [Installation](#installation)
 - [Usage](#usage)
 - [Development](#development)
-- [Contribute](#contribute)
+<!-- [Contribute](#contribute)
     - [Sponsor](#sponsor)
     - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
 - [License](#license)
-- [Footer](#footer)
+- [Footer](#footer)-->
 
 # Dependencies
 - Visual Studio
@@ -177,14 +177,14 @@ Right after that `DisplaySortedArray()` sorts the created array by calling `Sort
 As long as user doesn't input `0` while choosing the sort array within `ChooseSorting()` program runs in a loop.
 
 
-# Contribute
+<!--# Contribute
 [(Back to top)](#table-of-contents)
 
 <!-- This is where you can let people know how they can **contribute** to your project. Some of the ways are given below.
 
 Also this shows how you can add subsections within a section. -->
 
-### Sponsor
+<!--### Sponsor
 [(Back to top)](#table-of-contents)
 
 <!-- Your project is gaining traction and it is being used by thousands of people(***with this README there will be even more***). Now it would be a good time to look for people or organisations to sponsor your project. This could be because you are not generating any revenue from your project and you require money for keeping the project alive.
@@ -193,7 +193,7 @@ You could add how people can sponsor your project in this section. Add your patr
 
 A good idea is to also display the sponsors with their organisation logos or badges to show them your love!(*Someday I will get a sponsor and I can show my love*) -->
 
-### Adding new features or fixing bugs
+<!--### Adding new features or fixing bugs
 [(Back to top)](#table-of-contents)
 
 <!-- This is to give people an idea how they can raise issues or feature requests in your projects. 
@@ -204,7 +204,7 @@ Personally and by standard, you should use a [issue template](https://github.com
 
 You could also add contact details for people to get in touch with you regarding your project. -->
 
-# License
+<!--# License
 [(Back to top)](#table-of-contents)
 
 <!-- Adding the license to README is a good practice so that people can easily refer to it.
@@ -213,7 +213,7 @@ Make sure you have added a LICENSE file in your project folder. **Shortcut:** Cl
 
 I personally add the name of the license and provide a link to it like below. -->
 
-[GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
+<!--[GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
 
 # Footer
 [(Back to top)](#table-of-contents)
@@ -222,7 +222,7 @@ I personally add the name of the license and provide a link to it like below. --
 
 Let's make it an image because by now you have realised that multimedia in images == cool(*please notice the subtle programming joke). -->
 
-Leave a star in GitHub, give a clap in Medium and share this code.
+<!--Leave a star in GitHub, give a clap in Medium and share this code.-->
 
 <!-- Add the footer here -->
 
