@@ -28,7 +28,7 @@ Sort algorithms used:
 - InsertionSort
 - QuickSort
 - ShellSort
-- .NET library sort methods
+<!-- .NET library sort methods -->
 
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
 
